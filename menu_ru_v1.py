@@ -10,19 +10,18 @@ import random
 #Importation data
 with open("data.json", "r") as f: data = json.load(f)
 BOT_TOKEN = data["BOT_TOKEN"]
-GUILD_ID_BETHUNE = data["GUILD_ID_BETHUNE"]
-GUILD_ID_MATRICE = data["GUILD_ID_MATRICE"]
 
 ##### CONFIGIRATION SERVEUR DISCORD #####
-SERVER_NAME = "La Matrice"
+#Changer ce nom pour choisir le serveur
+SERVER_NAME = "R&T Béthune"
 
 if SERVER_NAME == 'R&T Béthune': 
-    GUILD_ID = GUILD_ID_BETHUNE
+    GUILD_ID = data["GUILD_ID_BETHUNE"]
     ROLE_ADMIN = "Admin"
     ROLE_A_PING = "Carbo"
     CHANNEL_NAME = '🍝menu-ru'
 elif SERVER_NAME == 'La Matrice': 
-    GUILD_ID = GUILD_ID_MATRICE
+    GUILD_ID = data["GUILD_ID_MATRICE"]
     ROLE_ADMIN = "Admin"
     ROLE_A_PING = "Amis"
     CHANNEL_NAME = '🍝menu-ru'
